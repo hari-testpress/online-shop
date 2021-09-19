@@ -33,7 +33,7 @@ Your shopping cart
                 {{item.quantity}}
             </td>
             <td>
-                <form action="" method="post">
+                <form action="{% url "cart:cart_remove" product.id %}" method="post">
                     <input type="submit" value="Remove">
                     {% csrf_token %}
                 </form>
