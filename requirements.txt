@@ -2,3 +2,4 @@ Django==3.2.7
 pre-commit==2.15.0
 Pillow==8.3.2
 celery==4.4.2
+braintree==3.59.0
