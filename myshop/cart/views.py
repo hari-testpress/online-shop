@@ -16,7 +16,7 @@ def cart_add(request, product_id):
             cart.add_product(product=product, quantity=form_data["quantity"])
         else:
             cart.change_product_quantity(
-                product=product, quantity=form_data.quantity
+                product=product, quantity=form_data["quantity"]
             )
 
     return redirect("cart:cart_detail")
