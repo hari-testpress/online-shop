@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 07:46+0530\n"
+"POT-Creation-Date: 2021-09-23 10:29+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\cart\forms.py:10 .\cart\templates\cart\detail.html:16
+#: .\cart\forms.py:9 .\cart\templates\cart\detail.html:16
 msgid "Quantity"
 msgstr ""
 
@@ -78,13 +78,45 @@ msgstr ""
 msgid "Coupon"
 msgstr ""
 
-#: .\myshop\settings.py:138
+#: .\myshop\settings.py:141
 msgid "English"
-msgstr "Inglés"
+msgstr ""
 
-#: .\myshop\settings.py:139
+#: .\myshop\settings.py:142
 msgid "Spanish"
-msgstr "Español"
+msgstr ""
+
+#: .\myshop\urls.py:24
+msgid "admin/"
+msgstr ""
+
+#: .\myshop\urls.py:25
+msgid "cart/"
+msgstr ""
+
+#: .\myshop\urls.py:26
+msgid "orders/"
+msgstr ""
+
+#: .\myshop\urls.py:27
+msgid "payment/"
+msgstr ""
+
+#: .\myshop\urls.py:28
+msgid "coupons/"
+msgstr ""
+
+#: .\payments\urls.py:8
+msgid "process/"
+msgstr ""
+
+#: .\payments\urls.py:9
+msgid "done/"
+msgstr ""
+
+#: .\payments\urls.py:10
+msgid "canceled/"
+msgstr ""
 
 #: .\shop\templates\shop\base.html:7 .\shop\templates\shop\base.html:12
 msgid "My shop"
@@ -94,11 +126,11 @@ msgstr ""
 msgid "Language"
 msgstr ""
 
-#: .\shop\templates\shop\base.html:35
+#: .\shop\templates\shop\base.html:34
 msgid "Your cart"
-msgstr ""
+msgstr "Cantidad"
 
-#: .\shop\templates\shop\base.html:37
+#: .\shop\templates\shop\base.html:36
 #, python-format
 msgid ""
 "\n"
@@ -111,6 +143,19 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: .\shop\templates\shop\base.html:44
+#: .\shop\templates\shop\base.html:43
 msgid "Your cart is empty."
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:5
+#: .\shop\templates\shop\product\list.html:23
+msgid "Products"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:10
+msgid "Categories"
+msgstr ""
+
+#: .\shop\templates\shop\product\list.html:13
+msgid "All"
 msgstr ""

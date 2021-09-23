@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-23 07:46+0530\n"
+"POT-Creation-Date: 2021-09-23 10:29+0530\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\orders\models.py:9
-msgid "first name"
-msgstr "nombre"
-
 #: .\orders\models.py:10
-msgid "last name"
-msgstr "apellidos"
+msgid "first name"
+msgstr ""
 
 #: .\orders\models.py:11
-msgid "e-mail"
-msgstr "e-mail"
+msgid "last name"
+msgstr ""
 
 #: .\orders\models.py:12
+msgid "e-mail"
+msgstr ""
+
+#: .\orders\models.py:13
 msgid "address"
 msgstr "dirección"
 
-#: .\orders\models.py:13
+#: .\orders\models.py:14
 msgid "postal code"
 msgstr "código postal"
 
-#: .\orders\models.py:14
+#: .\orders\models.py:15
 msgid "city"
 msgstr "ciudad"
 
@@ -79,4 +79,8 @@ msgid ""
 "    <p>Your order has been successfully completed. Your order number is "
 "<strong>%(order_id)s</strong>.</p>\n"
 "  "
+msgstr ""
+
+#: .\orders\urls.py:8
+msgid "create/"
 msgstr ""

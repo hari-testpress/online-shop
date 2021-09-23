@@ -133,15 +133,16 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
-LANGUAGE_CODE = "en"
+LOCALE_PATHS = (os.path.join(BASE_DIR, "locale/"),)
 
+LANGUAGE_CODE = "en"
 
 LANGUAGES = (
     ("en", _("English")),
     ("es", _("Spanish")),
 )
 
-LOCALE_PATHS = (os.path.join(BASE_DIR, "locale/"),)
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
