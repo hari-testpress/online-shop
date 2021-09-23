@@ -4,3 +4,5 @@ Pillow==8.3.2
 celery==4.4.2
 braintree==3.59.0
 braintree==3.59.0
+django-parler==2.0.1
+redis==3.4.1
