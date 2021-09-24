@@ -6,7 +6,7 @@ from .models import Order
 from cart.cart import Cart
 from .models import OrderItem
 from .forms import OrderCreateForm
-from .tasks import send_order-creation_mail
+from .tasks import send_order_creation_mail
 import weasyprint
 from django.conf import settings
 from django.http import HttpResponse
@@ -27,16 +27,10 @@ def order_create(request):
                     quantity=item["quantity"],
                 )
             cart.clear()
-<<<<<<< HEAD
             send_order_creation_mail.delay(order.id)
             return render(
                 request, "orders/order/created.html", {"order": order}
             )
-=======
-            order_created.delay(order.id)
-            request.session["order_id"] = order.id
-            return redirect(reverse("payment:process"))
->>>>>>> 44730a3 (Support payment gateway)
     else:
         form = OrderCreateForm()
     return render(
@@ -51,7 +45,7 @@ def admin_order_detail(request, order_id):
 
 
 @staff_member_required
-def admin_order_pdf(request, order_id):
+def generate_invoice_pdf(request, order_id):
     order = get_object_or_404(Order, id=order_id)
     html = render_to_string("orders/order/pdf.html", {"order": order})
     response = HttpResponse(content_type="application/pdf")

@@ -12,7 +12,7 @@ urlpatterns = [
     ),
     path(
         "admin/order/<int:order_id>/pdf/",
-        views.admin_order_pdf,
+        views.generate_invoice_pdf,
         name="admin_order_pdf",
     ),
 ]
