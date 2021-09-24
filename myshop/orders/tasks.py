@@ -4,7 +4,7 @@ from .models import Order
 
 
 @task
-def order_created(order_id):
+def send_order_creation_mail(order_id):
     order = Order.objects.get(id=order_id)
     subject = f"Order nr. {order.id}"
     message = (
