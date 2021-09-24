@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.urls import reverse
+from django.shortcuts import render, redirect
 from cart.cart import Cart
 from .models import OrderItem
 from .forms import OrderCreateForm
@@ -19,10 +20,16 @@ def order_create(request):
                     quantity=item["quantity"],
                 )
             cart.clear()
+<<<<<<< HEAD
             send_order_creation_mail.delay(order.id)
             return render(
                 request, "orders/order/created.html", {"order": order}
             )
+=======
+            order_created.delay(order.id)
+            request.session["order_id"] = order.id
+            return redirect(reverse("payment:process"))
+>>>>>>> 44730a3 (Support payment gateway)
     else:
         form = OrderCreateForm()
     return render(
