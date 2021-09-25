@@ -1,6 +1,7 @@
 import redis
 from django.conf import settings
 from .models import Product
+import itertools
 
 
 # connect to redis
@@ -15,12 +16,11 @@ class Recommender(object):
 
     def products_bought(self, products):
         product_ids = [p.id for p in products]
-        for product_id in product_ids:
-            for with_id in product_ids:
-                if product_id != with_id:
-                    redis_client.zincrby(
-                        self.get_product_key(product_id), 1, with_id
-                    )
+        combinations = itertools.combinations(product_ids, 2)
+        for product_id, purchased_with_id in combinations:
+            redis_client.zincrby(
+                self.get_product_key(product_id), 1, purchased_with_id
+            )
 
     def suggest_products_for(self, products, max_results=6):
         product_ids = [p.id for p in products]
